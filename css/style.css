@@ -1,0 +1,163 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:content-box ;
+}
+body{
+background-color:#222;
+display: flex;
+height: 100vh;
+justify-content: center;
+align-items: center;
+z-index: 0;
+}
+body.on{
+
+  background:radial-gradient(#555, #111);
+ 
+}
+
+
+.wrapper{
+  width: 150px;
+  height: 150px;
+  top: 35%;
+  position: absolute;
+  background-color: #444;
+  display: block;
+border-radius: 50%;
+  z-index: 3;
+}
+.wrapper::before{
+  content: '';
+  position: absolute;
+  width: 60px;
+  left: 50%;
+  translate: -50%;
+  height: 60px;
+  top: -80px;
+  background-color: #444;
+  border-top: 41px solid #000;
+  border-radius:15px ;
+z-index: 0;
+}
+
+body.on .wrapper{
+  background: #fff;
+  box-shadow: 0 0 25px #fff,
+  0 0 50px #c5c3c3,
+  0 0 100px #ffffffee,
+  0 0 125px #ffffffee,
+  0 0 150px #fff,
+ ;
+  }
+.wrapper::after{
+  content: '';
+  position: absolute;
+  width: 60px;
+  left: 50%;
+  translate: -50%;
+  background-color: #000;
+  width: 16px;
+  height: 50vh;
+  bottom: 190px;
+  z-index: 1;
+  
+}
+body.on .wrapper::before{
+  background-color: #fff;
+ box-shadow: 0 0 100px #fff;
+}
+
+.wrapper span:nth-child(1){
+
+  width: 30px;
+  height: 30px;
+  top: -10%;
+  left: 18.5px;
+  
+  transform: rotate(346deg);
+  position: absolute;
+  background-color: transparent;
+  display: block;
+border-bottom-right-radius: 40px;
+box-shadow: 20px 20px 0 10px #444;
+
+}
+.wrapper span:nth-child(2){
+  width: 30px;
+  height: 30px;
+  top: -10%;
+  right: 18.5px;
+  
+  transform: rotate(16deg);
+  position: absolute;
+  background-color: transparent;
+  display: block;
+border-bottom-Left-radius: 40px;
+box-shadow: -20px 20px 0 10px #444;
+
+}
+
+body.on .wrapper span:nth-child(1)
+{
+
+
+box-shadow: 20px 20px 0 10px #ffffffee;
+
+}
+body.on .wrapper span:nth-child(2)
+{
+
+
+box-shadow: -20px 20px 0 10px #ffffffee;
+
+}
+.leght{
+display: flex;
+justify-content: center;
+align-items: center;
+right: 10px;
+bottom: 5px;
+width: 100px;
+height: 100px;
+background:linear-gradient(#fff,#999);
+z-index: 3;
+border-radius: 10px;
+position: absolute;
+}
+.leght::before{
+
+  content: '';
+  width: 20px;
+  height: 40px;
+box-shadow: 0 0 5px 2px #444;
+  border-radius: 5px;
+  background: #fff;
+}
+.leght::after{
+
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 7px;
+  top: 30px;
+  border-radius: 5px;
+  background: #888686;
+}
+body.on .leght::after{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 7px;
+  top: 64px;
+  border-radius: 5px;
+  background: #888686;
+
+}
+
+
+
+
+
+
